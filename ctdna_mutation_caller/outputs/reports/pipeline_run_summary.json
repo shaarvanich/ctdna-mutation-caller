@@ -1,0 +1,93 @@
+{
+    "metadata": {
+        "timestamp": "2026-05-28T19:57:44.542389",
+        "input_source": "features.csv",
+        "pipeline_version": "1.0.0-LLM-Assisted",
+        "rules": {
+            "min_depth": 20,
+            "min_alt_count": 3,
+            "min_vaf": 0.005,
+            "max_strand_bias": 0.8,
+            "max_normal_vaf": 0.01
+        }
+    },
+    "cohort_statistics": {
+        "total_variants_analyzed": 2000,
+        "variants_passing_rules_as_candidates": 1595,
+        "rule_pass_count": 1595,
+        "driver_rescue_count": 0,
+        "candidate_vaf_distribution": {
+            "min_vaf": 0.0449438202247191,
+            "max_vaf": 0.5925925925925926,
+            "mean_vaf": 0.3062407339999082
+        }
+    },
+    "llm_classifications": {
+        "filtered": 1985,
+        "somatic_high_conf": 15
+    },
+    "vaf_tier_breakdown": {
+        "<1%": {
+            "total_count": 0,
+            "candidates_called": 0,
+            "calling_rate": 0.0
+        },
+        "1-5%": {
+            "total_count": 110,
+            "candidates_called": 81,
+            "calling_rate": 0.7363636363636363,
+            "true_positives": 50,
+            "false_positives": 31,
+            "true_negatives": 16,
+            "false_negatives": 13,
+            "sensitivity": 0.7936507936507936,
+            "specificity": 0.3404255319148936,
+            "precision": 0.6172839506172839,
+            "f1_score": 0.6944444444444444,
+            "balanced_accuracy": 0.5670381627828436,
+            "npv": 0.5517241379310345,
+            "mcc": 0.15053233374740074
+        },
+        ">5%": {
+            "total_count": 1890,
+            "candidates_called": 1514,
+            "calling_rate": 0.801058201058201,
+            "true_positives": 848,
+            "false_positives": 666,
+            "true_negatives": 183,
+            "false_negatives": 193,
+            "sensitivity": 0.8146013448607109,
+            "specificity": 0.21554770318021202,
+            "precision": 0.560105680317041,
+            "f1_score": 0.6637964774951077,
+            "balanced_accuracy": 0.5150745240204615,
+            "npv": 0.4867021276595745,
+            "mcc": 0.03756608645277374
+        },
+        "Overall": {
+            "total_count": 2000,
+            "candidates_called": 1595,
+            "calling_rate": 0.7975,
+            "true_positives": 898,
+            "false_positives": 697,
+            "true_negatives": 199,
+            "false_negatives": 206,
+            "sensitivity": 0.8134057971014492,
+            "specificity": 0.22209821428571427,
+            "precision": 0.5630094043887147,
+            "f1_score": 0.6654316413486477,
+            "balanced_accuracy": 0.5177520056935817,
+            "npv": 0.49135802469135803,
+            "mcc": 0.04393474503339823
+        }
+    },
+    "top_mutated_somatic_genes": {
+        "RB1": 3,
+        "CDKN2A": 3,
+        "TP53": 2,
+        "SMAD4": 2,
+        "KEAP1": 2,
+        "FAT1": 2,
+        "KRAS": 1
+    }
+}
